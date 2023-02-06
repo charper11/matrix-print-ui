@@ -1,7 +1,9 @@
 # matrix-print-ui
 UI for matrix print project
 
-Text can be added into the textarea box and when the 'print' button is selected it will automatically be printed by the Tandy DMP130 dot matrix printer.
+Text can be added into the textarea box and when the 'print' button is selected it will automatically be printed by the Tandy DMP130 dot matrix printer. 
+
+(currently only works on the local network)
 
 ## Available Scripts
 
