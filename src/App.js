@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useId, useState } from 'react'
+import React, { useState } from 'react'
 
 const printNewSudoku = async () => {
   const result = await fetch('http://192.168.1.155:3000/sudoku', {
@@ -13,7 +13,6 @@ const printNewSudoku = async () => {
 }
 
 function App() {
-  const postTextAreaId = useId();
   const [value, setValue] = useState();
 
   const printText = async () => {
@@ -30,19 +29,19 @@ function App() {
   setValue("");
   };
 
+  //      <button onClick={printNewSudoku}>Sudoku</button>
+
   return (
     <div>
-      <button onClick={printNewSudoku}>Sudoku</button>
-      <label htmlFor={postTextAreaId}>
-        Add text to print:
-      </label>
+      <div className='title'>
+        <h1>Matrix Print</h1>
+      </div>
       <textarea
-        id={postTextAreaId}
+        id="textarea"
         name="postContent"
-        rows={4}
-        cols={40}
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        placeholder={!value || value === "" ? "Add text here to print" : ""}
       />
       <button onClick={printText}>Print</button>
     </div>

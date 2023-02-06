@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# matrix-print-ui
+UI for matrix print project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Text can be added into the textarea box and when the 'print' button is selected it will automatically be printed by the Tandy DMP130 dot matrix printer.
 
 ## Available Scripts
 
