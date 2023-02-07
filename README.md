@@ -3,6 +3,8 @@ UI for matrix print project
 
 Text can be added into the textarea box and when the 'print' button is selected it will automatically be printed by the Tandy DMP130 dot matrix printer. 
 
+https://charper11.github.io/matrix-print-ui/
+
 (currently only works on the local network)
 
 ## Available Scripts
