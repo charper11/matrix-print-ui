@@ -1,11 +1,12 @@
 body {
   background-color: #222225;
   color: #62c4ff;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Courier New, monospace, serif;
   margin-left: 5%;
 }
 
 button {
+  font-family: Courier New, monospace, serif;
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 16px;
@@ -13,9 +14,11 @@ button {
   background: transparent;
   border: 1px solid #62c4ff;
   border-radius: 5px;
-  cursor: pointer;
-  display: block;
   width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 button:hover {
@@ -25,7 +28,8 @@ button:hover {
 
 textarea {
   width: 85%;
-  height: 300px;
+  height: 450px;
+  font-family: Courier New, monospace, serif;
   font-size: 16px;
   padding: 10px;
   border: 1px solid gray;
