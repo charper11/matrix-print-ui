@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <div className='title'>
-        <h1>Matrix Print</h1>
+        <h2 style={{ color: 'white' }}>></h2><h2> Matrix Print</h2><h2 style={{color: '#206c9b'}}>|</h2>
       </div>
       <textarea
         id="textarea"

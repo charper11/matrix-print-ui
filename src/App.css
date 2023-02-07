@@ -2,24 +2,25 @@ body {
   background-color: #222225;
   color: #62c4ff;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-left: 5%;
 }
 
 button {
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 16px;
-  background-color: lightgray;
-  border: none;
+  color: #62c4ff;
+  background: transparent;
+  border: 1px solid #62c4ff;
   border-radius: 5px;
   cursor: pointer;
   display: block;
   width: 80px;
-  text-align: center;
-  margin: 0 auto;
 }
 
 button:hover {
-  background-color: darkgray;
+  background-color: #62c4ff;
+  color: #222225;
 }
 
 textarea {
@@ -30,10 +31,14 @@ textarea {
   border: 1px solid gray;
   border-radius: 5px;
   margin-bottom: 10px;
-  margin-left: 5%;
   background: transparent;
 }
 
-.title{
-  text-align: center;
+h2 {
+  display: inline;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
