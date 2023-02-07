@@ -1,5 +1,6 @@
 {
   "name": "matrix-print-ui",
+  "homepage": "https://charper11.github.io/matrix-print-ui/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
