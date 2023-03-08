@@ -2,7 +2,6 @@ body {
   background-color: #222225;
   color: #62c4ff;
   font-family: Courier New, monospace, serif;
-  margin-left: 5%;
 }
 
 button {
@@ -14,7 +13,6 @@ button {
   background: transparent;
   border: 1px solid #62c4ff;
   border-radius: 5px;
-  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +41,48 @@ h2 {
   display: inline;
 }
 
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  color: white;
+}
+
+.main-content {
+  display: flex;
+}
+
+.page-content {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+
 .title {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: #62c4ff;
+  margin-bottom: 16px;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-gt {
+  color: white;
+}
+
+.title-text {
+  margin-left: 4px;
+}
+
+.title-cursor {
+  color: #206c9b;
 }
