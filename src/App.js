@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,17 +7,8 @@ import "./App.css";
 import CustomPrint from "./routes/custom-print";
 import Alarm from "./routes/alarm";
 import Root from "./routes/root";
-
-const printNewSudoku = async () => {
-  const result = await fetch("http://192.168.1.155:3000/sudoku", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  console.log(result);
-};
+import LinkPrint from "./routes/link-print";
+import Sudoku from "./routes/sudoku";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +23,14 @@ function App() {
         {
           path: 'custom-print',
           element: <CustomPrint />,
+        },
+        {
+          path: 'link-print',
+          element: <LinkPrint />
+        },
+        {
+          path: 'sudoku',
+          element: <Sudoku />
         },
       ],
     },

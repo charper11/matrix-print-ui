@@ -16,15 +16,15 @@ export default function Root() {
             <Link className="sidebar-link" to={`custom-print`}>
               Custom print
             </Link>
-            {/* <Link className="sidebar-link" to={`custom-print`}>
-              Article print
-            </Link> */}
+            <Link className="sidebar-link" to={`link-print`}>
+              Link print
+            </Link>
+            <Link className="sidebar-link" to={`sudoku`}>
+              Sudoku
+            </Link>
             <Link className="sidebar-link" to={`alarm`}>
               Alarm
             </Link>
-            {/* <Link className="sidebar-link" to={`custom-print`}>
-              Quick print
-            </Link> */}
           </div>
           <div className="page-content">
             <Outlet />

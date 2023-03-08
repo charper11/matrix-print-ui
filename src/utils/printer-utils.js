@@ -7,7 +7,8 @@ const PRINTER_URL = `${PRINTER_DOMAIN}:${PORT}`;
 export const PROGRAMS = {
   ALARM: 'bell',
   SUDOKU: 'sudoku',
-  TEXT: 'text'
+  TEXT: 'text',
+  LINK: 'link'
 };
 
 export async function print(program, dev=false, data = {}) {
