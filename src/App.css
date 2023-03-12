@@ -37,10 +37,6 @@ textarea {
   background: transparent;
 }
 
-h2 {
-  display: inline;
-}
-
 .homepage {
   display: flex;
   flex-direction: column;
@@ -73,16 +69,4 @@ h2 {
 
 .title-link {
   text-decoration: none;
-}
-
-.title-gt {
-  color: white;
-}
-
-.title-text {
-  margin-left: 4px;
-}
-
-.title-cursor {
-  color: #206c9b;
 }

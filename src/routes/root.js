@@ -1,14 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 
 export default function Root() {
+
+  const titleString = 
+  "    __  ___      __       _         ____       _       __ <br />" +
+  "   /  |/  /___ _/ /______(_)  __   / __ \\_____(_)___  / /_ <br />" +
+  "  / /|_/ / __ `/ __/ ___/ / |/_/  / /_/ / ___/ / __ \\/ __/ <br />" +
+  " / /  / / /_/ / /_/ /  / />  <   / ____/ /  / / / / / /_  <br />" +
+  "/_/  /_/\\__,_/\\__/_/  /_/_/|_|  /_/   /_/  /_/_/ /_/\\__/  <br />";
   return (
     <>
       <div className="homepage">
         <Link className="title-link" to={`/`}>
           <div className="title">
-            <h2 className="title-gt">&gt;</h2>
-            <h2 className="title-text">Matrix Print</h2>
-            <h2 className="title-cursor">|</h2>
+            <pre className="title-text" dangerouslySetInnerHTML={{__html: titleString}}/>
           </div>
         </Link>
         <div className="main-content">
