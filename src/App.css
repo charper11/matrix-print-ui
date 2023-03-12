@@ -1,6 +1,7 @@
 body {
   background-color: #222225;
-  color: #62c4ff;
+  color: #e22828;
+  text-shadow: 0 0 8px #e22828;
   font-family: Courier New, monospace, serif;
 }
 
@@ -9,10 +10,9 @@ button {
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 16px;
-  color: #62c4ff;
+  color: #e22828;
   background: transparent;
-  border: 1px solid #62c4ff;
-  border-radius: 5px;
+  border: 1px solid #e22828;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ button {
 }
 
 button:hover {
-  background-color: #62c4ff;
+  background-color: #e22828;
   color: #222225;
 }
 
@@ -29,41 +29,53 @@ textarea {
   height: 450px;
   font-family: Courier New, monospace, serif;
   font-size: 16px;
-  color: #e8e9ed;
+  color: #e22828;
+  text-shadow: 0 0 8px #e22828;
   padding: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  border: 1px dashed #e22828;
   margin-bottom: 10px;
   background: transparent;
 }
 
 .homepage {
-  display: flex;
-  flex-direction: column;
   padding: 16px;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .navbar-link {
-  color: white;
+  color: #e22828;;
 }
 
-.main-content {
-  display: flex;
+.table-border {
+  border: 2px dashed;
 }
-
 .page-content {
-  flex-grow: 1;
   margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.print-table {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 16px;
+  }
+
+.print-option {
+  text-align: center;
 }
 
 .title {
-  color: #62c4ff;
+  color: #e22828;
+  text-shadow: 0 0 8px #e22828;
   margin-bottom: 16px;
 }
 
