@@ -14,7 +14,30 @@ export default function Alarm() {
       <div className="page-title">
         alarm
       </div>
-      <button onClick={setAlarm}>Set alarm</button>
+      <div className="alarm-form">
+        <label>
+          newspaper <input type="checkbox" />
+        </label>
+        <br />
+        <label>
+          sudoku
+          <select>
+            <option></option>
+            <option>easy</option>
+            <option>medium</option>
+            <option>hard</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          subway alerts <input type="checkbox" />
+        </label>
+        <br />
+        <label>
+          weather <input type="checkbox" />
+        </label>
+        <button onClick={setAlarm}>Set alarm</button>
+      </div>
     </>
   );
 }
