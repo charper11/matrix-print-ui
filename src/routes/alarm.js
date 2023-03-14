@@ -11,6 +11,9 @@ export default function Alarm() {
 
   return (
     <>
+      <div className="page-title">
+        alarm
+      </div>
       <button onClick={setAlarm}>Set alarm</button>
     </>
   );

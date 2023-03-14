@@ -17,6 +17,9 @@ export default function Sudoku() {
 
   return (
     <>
+      <div className="page-title">
+        sudoku
+      </div>
       <form onSubmit={handleSubmit}>
         <p>
           difficulty

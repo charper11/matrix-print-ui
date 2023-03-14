@@ -14,6 +14,9 @@ export default function CustomPrint() {
 
   return (
     <>
+      <div className="page-title">
+        custom print
+      </div>
       <textarea
         id="textarea"
         name="postContent"

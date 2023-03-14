@@ -19,6 +19,9 @@ export default function LinkPrint() {
 
   return (
     <>
+    <div className="page-title">
+      link print
+    </div>
     <form onSubmit={handleSubmit}>
       <label>
         URL <input name="url" type="text" />
