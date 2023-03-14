@@ -1,27 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import { PROGRAMS, print } from '../utils/printer-utils';
 
 export default function LinkPrint() {
-  const [value, setValue] = useState();
 
-  const printText = async () => {
-    const my_data = { content: value };
-    const result = await print(PROGRAMS.LINK, true, my_data);
+  const handleSubmit = async (event) => {
+    // prevent the browser from reloading the page
+    event.preventDefault();
 
+    // read the form data
+    const form = event.target;
+    const formData = new FormData(form);
+    const formJson = Object.fromEntries(formData.entries());
+
+    // send data to print function
+    const result = await print(PROGRAMS.LINK, true, formJson);
     console.log(result);
-    setValue("");
   };
 
   return (
     <>
-      <textarea
-        id="textarea"
-        name="postContent"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={!value || value === "" ? "Add url here to print" : ""}
-      />
-      <button onClick={printText}>Print</button>
+    <form onSubmit={handleSubmit}>
+      <label>
+        URL <input name="url" type="text" />
+      </label>
+      <br />
+      <label>
+        basic format <input name="text_only" type="checkbox" />
+      </label>
+      <br />
+      <label>
+        ignore links <input name="ignore_href" type="checkbox" />
+      </label>
+      <br />
+      <label>
+        form feed <input name="ff" type="checkbox" />
+      </label>
+      <br />
+      <button type="submit">Print</button>
+    </form>
     </>
   );
 }
