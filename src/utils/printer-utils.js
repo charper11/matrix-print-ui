@@ -8,7 +8,10 @@ export const PROGRAMS = {
   ALARM: 'bell',
   SUDOKU: 'sudoku',
   TEXT: 'text',
-  LINK: 'link'
+  LINK: 'link',
+  NEWSPAPER: 'newspaper',
+  MB: 'mb',
+  SUBSTACK: 'substack'
 };
 
 export async function print(program, dev=false, data = {}) {

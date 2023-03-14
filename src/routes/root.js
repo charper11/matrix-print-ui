@@ -1,6 +1,22 @@
 import { Link } from "react-router-dom";
+import { PROGRAMS, print } from '../utils/printer-utils';
 
 export default function Root() {
+
+  async function printNewsPaper() {
+    const result = await print(PROGRAMS.NEWSPAPER);
+    return result;
+  }
+
+  async function printPI() {
+    const result = await print(PROGRAMS.SUBSTACK, false, {"url": "https://www.perfectlyimperfect.fyi/"});
+    return result;
+  }
+
+  async function printMB() {
+    const result = await print(PROGRAMS.MB);
+    return result;
+  }
 
   return (
     <>
@@ -23,9 +39,9 @@ export default function Root() {
           <div className="page-content">
             <div className="print-table">
               <span>Insta Print:</span>
-              <span className="print-option">newspaper</span>
-              <span className="print-option">perfectly imperfect</span>
-              <span className="print-option">morning brew</span>
+                <button onClick={printNewsPaper}>newspaper</button>
+                <button onClick={printPI}>perfectly imperfect</button>
+                <button onClick={printMB}>morning brew</button>
             </div>
           </div>
           </div>
