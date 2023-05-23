@@ -3,10 +3,49 @@ import { PROGRAMS, print } from '../utils/printer-utils';
 
 export default function Alarm() {
 
-  async function setAlarm() {
-    // for now, just rings alarm
-    const result = await print(PROGRAMS.ALARM);
-    return result;
+  const minutesNumber = Array.from(Array(60).keys());
+  const hourNumber = Array.from({length: 12}, (_, i) => i + 1);
+
+  const [hour, setHour] = useState();
+  const [minute, setMinute] = useState();
+  const [ampm, setAmPm] = useState();
+
+  const hourChange = (event) => {
+    setHour(event.target.value);
+  }
+  const minuteChange = (event) => {
+    setMinute(event.target.value);
+  }
+  const ampmChange = (event) => {
+    setAmPm(event.target.value);
+  }
+
+  const setAlarm = async (event) => {
+    // prevent the browser from reloading the page
+    event.preventDefault();
+
+    //////////////////////////////////////
+    //        set alarm date            //
+    //////////////////////////////////////
+    let military_hour = hour;
+    if(ampm === 'PM') {
+      military_hour += 12;
+    }
+
+    const now = new Date();
+    const selectedTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), military_hour, minute, 0);
+
+    if(selectedTime.getTime() < now.getTime()) {
+      selectedTime.setDate(now.getDate() + 1);
+    }
+
+    // read the form data
+    const form = event.target;
+    const formData = new FormData(form);
+    formData.append("alarmTime", selectedTime);
+    const formJson = Object.fromEntries(formData.entries());
+    const result = await print(PROGRAMS.ALARM, false, formJson);
+    console.log(result);
   }
 
   return (
@@ -15,28 +54,47 @@ export default function Alarm() {
         alarm
       </div>
       <div className="alarm-form">
+        <form onSubmit={setAlarm}>
+        <select value={hour} onChange={hourChange}>
+          <option value="Hour" selected hidden>Hour</option>
+          {hourNumber.map((hour, index) => (
+            <option key={index} value={hour}>
+              {hour}
+            </option>
+          ))}
+        </select>
+        <select value={minute} onChange={minuteChange}>
+          <option value="Minute" selected hidden>Minute</option>
+          {minutesNumber.map((minutes, index) => (
+            <option key={index} value={minutes}>
+              {minutes}
+            </option>
+          ))}
+        </select>
+        <select value={ampm} onChange={ampmChange}>
+          <option value="AM/PM" selected hidden>AM/PM</option>
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <br />
         <label>
-          newspaper <input type="checkbox" />
+          bell <input name="buzzer" type="checkbox" />
         </label>
         <br />
         <label>
-          sudoku
-          <select>
-            <option></option>
-            <option>easy</option>
-            <option>medium</option>
-            <option>hard</option>
-          </select>
+          text <input name="text" type="text" />
         </label>
         <br />
         <label>
-          subway alerts <input type="checkbox" />
+          newspaper <input name="newspaper" type="checkbox" />
         </label>
         <br />
         <label>
-          weather <input type="checkbox" />
+          form feed <input name="ff" type="checkbox" />
         </label>
-        <button onClick={setAlarm}>Set alarm</button>
+        <br />
+        <button type="submit">Set alarm</button>
+        </form>
       </div>
     </>
   );

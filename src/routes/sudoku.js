@@ -11,7 +11,7 @@ export default function Sudoku() {
     const formJson = Object.fromEntries(formData.entries());
 
     // send data to print function
-    const result = await print(PROGRAMS.SUDOKU, true, formJson);
+    const result = await print(PROGRAMS.SUDOKU, false, formJson);
     console.log(result);
   };
 

@@ -6,7 +6,7 @@ export default function CustomPrint() {
 
   const printText = async () => {
     const my_data = { content: value };
-    const result = await print(PROGRAMS.TEXT, true, my_data);
+    const result = await print(PROGRAMS.TEXT, false, my_data);
 
     console.log(result);
     setValue("");

@@ -5,7 +5,7 @@ const PORT = '3000';
 const PRINTER_URL = `${PRINTER_DOMAIN}:${PORT}`;
 
 export const PROGRAMS = {
-  ALARM: 'bell',
+  ALARM: 'alarm',
   SUDOKU: 'sudoku',
   TEXT: 'text',
   LINK: 'link',

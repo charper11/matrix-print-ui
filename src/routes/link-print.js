@@ -13,7 +13,7 @@ export default function LinkPrint() {
     const formJson = Object.fromEntries(formData.entries());
 
     // send data to print function
-    const result = await print(PROGRAMS.LINK, true, formJson);
+    const result = await print(PROGRAMS.LINK, false, formJson);
     console.log(result);
   };
 
