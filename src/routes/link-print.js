@@ -37,7 +37,7 @@ export default function LinkPrint() {
       </label>
       <br />
       <label>
-        form feed <input name="ff" type="checkbox" />
+        form feed &nbsp;&nbsp;&nbsp;<input name="ff" type="checkbox" />
       </label>
       <br />
       </div>

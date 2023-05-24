@@ -81,11 +81,11 @@ export default function Alarm() {
             </div>
             <br />
             <label>
-              bell <input name="buzzer" type="checkbox" />
+              text <input name="text" type="text" className="textbox" />
             </label>
             <br />
             <label>
-              text <input name="text" type="text" className="textbox" />
+              bell &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="buzzer" type="checkbox" />
             </label>
             <br />
             <label>
