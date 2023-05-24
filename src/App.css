@@ -116,7 +116,9 @@ textarea::placeholder {
 .title {
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
-  margin-bottom: 16px;
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
 }
 
 .title-link {
