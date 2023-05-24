@@ -1,13 +1,17 @@
-html {background: black !important;}
+html {
+  background: black !important;
+  text-transform: uppercase;
+}
+
 body {
   background: radial-gradient(ellipse at center,#ff000033, 30%,rgb(0, 0, 0) 70%) !important;
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
-  font-family: Courier New, monospace, serif;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 button {
-  font-family: Courier New, monospace, serif;
+  font-family: 'Share Tech Mono', monospace;
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 16px;
@@ -20,6 +24,7 @@ button {
   align-items: center;
   cursor: pointer;
   box-shadow: 0 0 4px #e22828;
+  text-transform: uppercase;
 }
 
 button:hover {
@@ -44,7 +49,7 @@ button:hover {
 textarea {
   width: 90%;
   height: 50vh;
-  font-family: Courier New, monospace, serif;
+  font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
@@ -64,7 +69,7 @@ textarea:focus {
 }
 
 .textbox {
-  font-family: Courier New, monospace, serif;
+  font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
@@ -135,8 +140,8 @@ input[type="checkbox"] {
   appearance: none;
   background: transparent;
   margin: 0;
-  width: 1.15em;
-  height: 1.15em;
+  width: 1.5em;
+  height: 1.5em;
   border: 1px solid #e22828;
   box-shadow: 0 0 4px #e22828;
   transform: translateY(-0.075em);

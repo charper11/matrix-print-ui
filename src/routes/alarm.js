@@ -58,7 +58,7 @@ export default function Alarm() {
           <div className="form-container">
             <div className="alarm-time">
               <select className="alarm-dropdown" value={hour} onChange={hourChange}>
-                <option value="Hour" selected hidden>Hour</option>
+                <option value="Hour" selected hidden>HOUR</option>
                 {hourNumber.map((hour, index) => (
                   <option key={index} value={hour}>
                     {hour}
@@ -66,7 +66,7 @@ export default function Alarm() {
                 ))}
               </select>
               <select className="alarm-dropdown" value={minute} onChange={minuteChange}>
-                <option value="Minute" selected hidden>Minute</option>
+                <option value="Minute" selected hidden>MINUTE</option>
                 {minutesNumber.map((minutes, index) => (
                   <option key={index} value={minutes}>
                     {minutes}
