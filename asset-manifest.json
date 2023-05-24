@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/matrix-print-ui/static/css/main.afb3295e.css",
+    "main.css": "/matrix-print-ui/static/css/main.e13234cd.css",
     "main.js": "/matrix-print-ui/static/js/main.00c489f0.js",
     "static/js/787.580c69c5.chunk.js": "/matrix-print-ui/static/js/787.580c69c5.chunk.js",
     "index.html": "/matrix-print-ui/index.html",
-    "main.afb3295e.css.map": "/matrix-print-ui/static/css/main.afb3295e.css.map",
+    "main.e13234cd.css.map": "/matrix-print-ui/static/css/main.e13234cd.css.map",
     "main.00c489f0.js.map": "/matrix-print-ui/static/js/main.00c489f0.js.map",
     "787.580c69c5.chunk.js.map": "/matrix-print-ui/static/js/787.580c69c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afb3295e.css",
+    "static/css/main.e13234cd.css",
     "static/js/main.00c489f0.js"
   ]
 }
