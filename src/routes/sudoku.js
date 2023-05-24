@@ -25,11 +25,17 @@ export default function Sudoku() {
         <p>
           difficulty
           <br />
-          <label><input type="radio" name="difficulty" value="easy" /> easy </label>
+          <label>
+            easy &nbsp;&nbsp;<input type="radio" name="difficulty" value="easy" />
+          </label>
           <br />
-          <label><input type="radio" name="difficulty" value="medium" /> medium </label>
+          <label>
+            medium <input type="radio" name="difficulty" value="medium" />
+          </label>
           <br />
-          <label><input type="radio" name="difficulty" value="hard" /> hard </label>
+          <label>
+            hard &nbsp;&nbsp;<input type="radio" name="difficulty" value="hard" />
+          </label>
         </p>
         </div>
         <div className="button-container">

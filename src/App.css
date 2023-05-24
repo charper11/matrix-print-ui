@@ -121,7 +121,7 @@ textarea::placeholder {
 
 .title {
   color: #e22828;
-  text-shadow: 0 0 8px #e22828;
+  text-shadow: 0 0 16px #e22828;
   letter-spacing: -1px;
   display: flex;
   justify-content: center;
