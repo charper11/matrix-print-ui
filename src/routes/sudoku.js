@@ -21,6 +21,7 @@ export default function Sudoku() {
         sudoku
       </div>
       <form onSubmit={handleSubmit}>
+        <div className="form-container">
         <p>
           difficulty
           <br />
@@ -30,7 +31,10 @@ export default function Sudoku() {
           <br />
           <label><input type="radio" name="difficulty" value="hard" /> hard </label>
         </p>
-        <button type="submit">Print</button>
+        </div>
+        <div className="button-container">
+          <button type="submit">Print</button>
+        </div>
       </form>
     </>
   );

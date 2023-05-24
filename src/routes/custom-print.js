@@ -17,6 +17,7 @@ export default function CustomPrint() {
       <div className="page-title">
         custom print
       </div>
+      <div className="text-container">
       <textarea
         id="textarea"
         name="postContent"
@@ -24,7 +25,10 @@ export default function CustomPrint() {
         onChange={(e) => setValue(e.target.value)}
         placeholder={!value || value === "" ? "Add text here to print" : ""}
       />
-      <button onClick={printText}>Print</button>
+      </div>
+      <div className="button-container">
+        <button onClick={printText}>Print</button>
+      </div>
     </>
   );
 }

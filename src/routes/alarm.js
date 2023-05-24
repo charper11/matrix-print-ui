@@ -55,45 +55,51 @@ export default function Alarm() {
       </div>
       <div className="alarm-form">
         <form onSubmit={setAlarm}>
-        <select value={hour} onChange={hourChange}>
-          <option value="Hour" selected hidden>Hour</option>
-          {hourNumber.map((hour, index) => (
-            <option key={index} value={hour}>
-              {hour}
-            </option>
-          ))}
-        </select>
-        <select value={minute} onChange={minuteChange}>
-          <option value="Minute" selected hidden>Minute</option>
-          {minutesNumber.map((minutes, index) => (
-            <option key={index} value={minutes}>
-              {minutes}
-            </option>
-          ))}
-        </select>
-        <select value={ampm} onChange={ampmChange}>
-          <option value="AM/PM" selected hidden>AM/PM</option>
-          <option value="AM">AM</option>
-          <option value="PM">PM</option>
-        </select>
-        <br />
-        <label>
-          bell <input name="buzzer" type="checkbox" />
-        </label>
-        <br />
-        <label>
-          text <input name="text" type="text" />
-        </label>
-        <br />
-        <label>
-          newspaper <input name="newspaper" type="checkbox" />
-        </label>
-        <br />
-        <label>
-          form feed <input name="ff" type="checkbox" />
-        </label>
-        <br />
-        <button type="submit">Set alarm</button>
+          <div className="form-container">
+            <div className="alarm-time">
+              <select className="alarm-dropdown" value={hour} onChange={hourChange}>
+                <option value="Hour" selected hidden>Hour</option>
+                {hourNumber.map((hour, index) => (
+                  <option key={index} value={hour}>
+                    {hour}
+                  </option>
+                ))}
+              </select>
+              <select className="alarm-dropdown" value={minute} onChange={minuteChange}>
+                <option value="Minute" selected hidden>Minute</option>
+                {minutesNumber.map((minutes, index) => (
+                  <option key={index} value={minutes}>
+                    {minutes}
+                  </option>
+                ))}
+              </select>
+              <select className="alarm-dropdown" value={ampm} onChange={ampmChange}>
+                <option value="AM/PM" selected hidden>AM/PM</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+            <br />
+            <label>
+              bell <input name="buzzer" type="checkbox" />
+            </label>
+            <br />
+            <label>
+              text <input name="text" type="text" className="textbox" />
+            </label>
+            <br />
+            <label>
+              newspaper <input name="newspaper" type="checkbox" />
+            </label>
+            <br />
+            <label>
+              form feed <input name="ff" type="checkbox" />
+            </label>
+            <br />
+          </div>
+        <div className="button-container">
+          <button type="submit">Set alarm</button>
+        </div>
         </form>
       </div>
     </>

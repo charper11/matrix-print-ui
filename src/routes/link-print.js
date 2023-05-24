@@ -23,8 +23,9 @@ export default function LinkPrint() {
       link print
     </div>
     <form onSubmit={handleSubmit}>
+    <div className="form-container">
       <label>
-        URL <input name="url" type="text" />
+        URL <input name="url" type="text" className="textbox" />
       </label>
       <br />
       <label>
@@ -39,7 +40,10 @@ export default function LinkPrint() {
         form feed <input name="ff" type="checkbox" />
       </label>
       <br />
-      <button type="submit">Print</button>
+      </div>
+      <div className="button-container">
+        <button type="submit">Print</button>
+      </div>
     </form>
     </>
   );
