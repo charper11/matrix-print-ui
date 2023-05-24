@@ -119,6 +119,7 @@ textarea::placeholder {
   letter-spacing: -1px;
   display: flex;
   justify-content: center;
+  font-size: 0.88em;
 }
 
 .title-link {
