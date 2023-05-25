@@ -29,7 +29,8 @@ export default function LinkPrint() {
       </label>
       <br />
       <label>
-        basic format <input name="text_only" type="checkbox" />
+        basic format
+        <input name="text_only" type="checkbox" />
       </label>
       <br />
       <label>
