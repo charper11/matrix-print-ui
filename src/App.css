@@ -5,6 +5,16 @@ html {
 
 body {
   background: radial-gradient(ellipse at center,#ff000033, 30%,rgb(0, 0, 0) 70%) !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% 3px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
   font-family: 'Share Tech Mono', monospace;
