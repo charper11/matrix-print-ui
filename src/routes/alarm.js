@@ -3,7 +3,12 @@ import { PROGRAMS, print } from '../utils/printer-utils';
 
 export default function Alarm() {
 
-  const minutesNumber = Array.from(Array(60).keys());
+  const minutesNumber = Array.from({length: 60}, (_, i) => {
+    if(i < 10) {
+      return i.toString().padStart(2, '0');
+    }
+    return i;
+  });
   const hourNumber = Array.from({length: 12}, (_, i) => i + 1);
 
   const [hour, setHour] = useState();
@@ -58,7 +63,7 @@ export default function Alarm() {
           <div className="form-container">
             <div className="alarm-time">
               <select className="alarm-dropdown" value={hour} onChange={hourChange}>
-                <option value="Hour" selected hidden>HOUR</option>
+                <option value="Hour" selected hidden>HR</option>
                 {hourNumber.map((hour, index) => (
                   <option key={index} value={hour}>
                     {hour}
@@ -66,7 +71,7 @@ export default function Alarm() {
                 ))}
               </select>
               <select className="alarm-dropdown" value={minute} onChange={minuteChange}>
-                <option value="Minute" selected hidden>MINUTE</option>
+                <option value="Minute" selected hidden>MIN</option>
                 {minutesNumber.map((minutes, index) => (
                   <option key={index} value={minutes}>
                     {minutes}

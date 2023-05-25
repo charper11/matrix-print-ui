@@ -121,7 +121,7 @@ textarea::placeholder {
 
 .title {
   color: #e22828;
-  text-shadow: 0 0 16px #e22828;
+  text-shadow: 0 0 8px #e22828;
   letter-spacing: -1px;
   display: flex;
   justify-content: center;
@@ -133,8 +133,10 @@ textarea::placeholder {
 }
 
 .page-title {
-  text-align: center;
+  text-align: left;
   padding: 16px;
+  margin-left: 20px;
+  font-size: 2em;
 }
 
 input[type="checkbox"] {
@@ -158,7 +160,12 @@ input[type="checkbox"]:checked {
   color: #e22828;
   border: 1px solid #e22828;
   box-shadow: 0 0 4px #e22828;
+  text-shadow: 0 0 8px #e22828;
   margin-right: 8px;
+  height: 2.5em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 .alarm-dropdown:focus {
@@ -177,4 +184,20 @@ input[type="checkbox"]:checked {
 
 .alarm-time {
   display: flex;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background: transparent;
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #e22828;
+  box-shadow: 0 0 4px #e22828;
+  transform: translateY(-0.075em);
+}
+
+input[type="radio"]:checked {
+  background-color: #ec3232;
+  box-shadow: 0 0 12px #e22828;
 }
