@@ -4,6 +4,7 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   background: radial-gradient(ellipse at center,#ff000033, 30%,rgb(0, 0, 0) 70%) !important;
   background-repeat: repeat-y !important;
   background-size: 100% 3px !important;
@@ -15,6 +16,9 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+=======
+  background: radial-gradient(ellipse at center, #ff000033, 30%, rgb(0, 0, 0) 70%) !important;
+>>>>>>> 731bcea3f24c9ded58015a7d2a291009765f0425
   color: #e22828;
   text-shadow: 0 0 8px #e22828;
   font-family: 'Share Tech Mono', monospace;
@@ -102,20 +106,21 @@ textarea::placeholder {
 
 .navbar {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 32px;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .navbar-link {
-  color: #e22828;;
+  color: #e22828;
 }
 
 .table-border {
   border: 2px dashed;
   box-shadow: 0 0 4px #e22828;
 }
+
 .page-content {
   margin-left: 16px;
   margin-right: 16px;
@@ -127,7 +132,7 @@ textarea::placeholder {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 16px;
-  }
+}
 
 .title {
   color: #e22828;
