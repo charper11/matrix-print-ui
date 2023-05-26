@@ -10,6 +10,7 @@ export default function Header() {
   "/_/  /_/\\__,_/\\__/_/  /_/_/|_|  /_/   /_/  /_/_/ /_/\\__/  <br />";
   return (
         <Link className="title-link" to={`/`}>
+          <div class="notch-cover"></div>
           <div className="title">
             <pre className="title-text" dangerouslySetInnerHTML={{__html: titleString}}/>
           </div>
