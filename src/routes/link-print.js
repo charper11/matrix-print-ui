@@ -19,33 +19,34 @@ export default function LinkPrint() {
 
   return (
     <>
-    <div className="page-title">
-      link print
-    </div>
-    <form onSubmit={handleSubmit}>
-    <div className="form-container">
-      <label>
-        URL <input name="url" type="text" className="textbox" />
-      </label>
-      <br />
-      <label>
-        basic format
-        <input name="text_only" type="checkbox" />
-      </label>
-      <br />
-      <label>
-        ignore links <input name="ignore_href" type="checkbox" />
-      </label>
-      <br />
-      <label>
-        form feed &nbsp;&nbsp;&nbsp;<input name="ff" type="checkbox" />
-      </label>
-      <br />
+      <div className="page-title">
+        link print
       </div>
-      <div className="button-container">
-        <button type="submit">Print</button>
-      </div>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <div className="form-container">
+          <label className="labeled-input">
+            <span className="textbox-span">URL</span>
+            <input name="url" type="text" className="input-textbox" />
+          </label>
+          <div className="option-container">
+            <label className="option-label">
+              <input className="option-labeled" name="text_only" type="checkbox" />
+              basic format
+            </label>
+            <label className="option-label">
+              <input className="option-labeled" name="ignore_href" type="checkbox" />
+              ignore links
+            </label>
+            <label className="option-label">
+              <input className="option-labeled" name="ff" type="checkbox" />
+              form feed
+            </label>
+          </div>
+        </div>
+        <div className="button-container">
+          <button type="submit">Print</button>
+        </div>
+      </form>
     </>
   );
 }

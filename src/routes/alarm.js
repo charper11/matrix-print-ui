@@ -3,13 +3,13 @@ import { PROGRAMS, print } from '../utils/printer-utils';
 
 export default function Alarm() {
 
-  const minutesNumber = Array.from({length: 60}, (_, i) => {
-    if(i < 10) {
+  const minutesNumber = Array.from({ length: 60 }, (_, i) => {
+    if (i < 10) {
       return i.toString().padStart(2, '0');
     }
     return i;
   });
-  const hourNumber = Array.from({length: 12}, (_, i) => i + 1);
+  const hourNumber = Array.from({ length: 12 }, (_, i) => i + 1);
 
   const [hour, setHour] = useState();
   const [minute, setMinute] = useState();
@@ -33,14 +33,14 @@ export default function Alarm() {
     //        set alarm date            //
     //////////////////////////////////////
     let military_hour = hour;
-    if(ampm === 'PM') {
+    if (ampm === 'PM') {
       military_hour += 12;
     }
 
     const now = new Date();
     const selectedTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), military_hour, minute, 0);
 
-    if(selectedTime.getTime() < now.getTime()) {
+    if (selectedTime.getTime() < now.getTime()) {
       selectedTime.setDate(now.getDate() + 1);
     }
 
@@ -85,26 +85,29 @@ export default function Alarm() {
               </select>
             </div>
             <br />
-            <label>
-              text <input name="text" type="text" className="textbox" />
+            <label className="labeled-input">
+              <span className="textbox-span">text</span>
+              <input name="text" type="text" className="input-textbox" />
             </label>
-            <br />
-            <label>
-              bell &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="buzzer" type="checkbox" />
-            </label>
-            <br />
-            <label>
-              newspaper <input name="newspaper" type="checkbox" />
-            </label>
-            <br />
-            <label>
-              form feed <input name="ff" type="checkbox" />
-            </label>
-            <br />
+
+            <div className="option-container">
+              <label className="option-label">
+                <input className="option-labeled" name="buzzer" type="checkbox" />
+                bell
+              </label>
+              <label className="option-label">
+                <input className="option-labeled" name="newspaper" type="checkbox" />
+                newspaper
+              </label>
+              <label className="option-label">
+                <input className="option-labeled" name="ff" type="checkbox" />
+                form feed
+              </label>
+            </div>
           </div>
-        <div className="button-container">
-          <button type="submit">Set alarm</button>
-        </div>
+          <div className="button-container">
+            <button type="submit">Set alarm</button>
+          </div>
         </form>
       </div>
     </>
