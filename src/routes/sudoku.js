@@ -22,24 +22,21 @@ export default function Sudoku() {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-container">
-          <p className="difficulty-text">
-            difficulty
-          </p>
-
-          <div className="option-container">
-            <label className="option-label">
-              <input className="option-labeled" type="radio" name="difficulty" value="easy" />
-              easy
-            </label>
-            <label className="option-label">
-              <input className="option-labeled" type="radio" name="difficulty" value="medium" />
-              medium
-            </label>
-            <label className="option-label">
-              <input className="option-labeled" type="radio" name="difficulty" value="hard" />
-              hard
-            </label>
-          </div>
+        <p>
+          difficulty
+          <br />
+          <label>
+            easy &nbsp;&nbsp;<input type="radio" name="difficulty" value="easy" />
+          </label>
+          <br />
+          <label>
+            medium <input type="radio" name="difficulty" value="medium" />
+          </label>
+          <br />
+          <label>
+            hard &nbsp;&nbsp;<input type="radio" name="difficulty" value="hard" />
+          </label>
+        </p>
         </div>
         <div className="button-container">
           <button type="submit">Print</button>

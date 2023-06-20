@@ -19,7 +19,6 @@ export default function CustomPrint() {
       </div>
       <div className="text-container">
       <textarea
-        className="custom-print-textarea"
         id="textarea"
         name="postContent"
         value={value}
