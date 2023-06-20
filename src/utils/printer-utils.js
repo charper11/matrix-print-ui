@@ -1,6 +1,6 @@
 import React from "react";
 
-const PRINTER_DOMAIN = 'https//192.168.1.155';
+const PRINTER_DOMAIN = 'http://192.168.1.155';
 const PORT = '3000';
 const PRINTER_URL = `${PRINTER_DOMAIN}:${PORT}`;
 
