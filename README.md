@@ -1,11 +1,20 @@
 # matrix-print-ui
-UI for matrix print project
 
-Text can be added into the textarea box and when the 'print' button is selected it will automatically be printed by the Tandy DMP130 dot matrix printer. 
+![ui](https://github.com/charper11/matrix-print-ui/assets/104863836/c7908ec9-94cc-404b-8e37-050b40da0100)
+
+This is the UI for wireless printing to a Tandy DMP130 dot matrix printer. 
 
 https://charper11.github.io/matrix-print-ui/
 
-(currently only works on the local network)
+Public site for viewing only. The react project is running using pm2 on a raspberry pi along with a Node.js server that is connected to the dot matrix printer with a serial to usb adapter. This is so only devices connected on my local network can initiate prints.
+
+## Tandy Dot Matrix Printer 
+
+![printer](https://github.com/charper11/matrix-print-ui/assets/104863836/74748509-75ac-40a2-96f8-b04a5ed0bad0)
+
+## Newspaper Example
+
+![newspaper](https://github.com/charper11/matrix-print-ui/assets/104863836/41c5b0e0-a58c-429e-9e05-fdf7e34c8fad)
 
 ## Available Scripts
 
